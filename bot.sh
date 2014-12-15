@@ -13,7 +13,7 @@ echo Commit: $(date)
 echo
 
 git add output.txt
-git add .bashbot
+git add bot.sh
 git commit -m “commit-bot”
 git push origin master
 echo
