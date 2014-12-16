@@ -1,5 +1,4 @@
 cd ~/Desktop/code/commit-bot
-
 clear
 
 #Create temporary file with new line in place
