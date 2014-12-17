@@ -14,6 +14,8 @@ echo
 git add output.txt
 git add bot.sh
 git commit -m “commit-bot”
+wait
+
 git push origin master
 echo
 
