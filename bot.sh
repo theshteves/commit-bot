@@ -11,9 +11,9 @@ mv temp_file.txt output.txt
 echo Commit: $(date)
 echo
 
-git add output.txt
-git add bot.sh
-git commit -m “commit-bot”
+git add output.txt &
+git add bot.sh &
+git commit -m “commit-bot” &
 wait
 
 git push origin master
