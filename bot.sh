@@ -11,11 +11,10 @@ mv temp_file.txt output.txt
 echo Commit: $(date)
 echo
 
-git add output.txt &
-git add bot.sh &
-git commit -m “commit-bot” &
-wait
+# git remote set-url origin git@github.com:theshteves/commit-bot.git
 
+git add output.txt
+git commit -m “commit-bot”
 git push origin master
 echo
 
