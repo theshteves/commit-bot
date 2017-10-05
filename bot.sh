@@ -1,23 +1,31 @@
-# crontab: 0 22 * * * source ~/Desktop/code/commit-bot/bot.sh
+#!/usr/bin/env bash
+#
+# Commit Bot by Steven Kneiser
+#
+# Deploy locally by adding the following line to your crontab:
+# 0 22 * * * source ~/Desktop/code/commit-bot/bot.sh
+#
+# Edit your crontab in vim w/ the simple command:
+# crontab -e
+#
+# Deploying just on your computer is better than a server if you want
+# your commits to more realistically mirror your computer usage.
+#
+# ...c'mon, nobody commits EVERY day ;)
+#
+info="Commit: $(date)"
+msg="$(fortune -s)"
 
-cd ~/Desktop/code/commit-bot
-clear
-
-###Create temporary file with new line in place
-cat output.txt > temp_file.txt
-echo Commit: $(date) >> temp_file.txt
-
-echo Commit: $(date)
+cd ~/Desktop/code/commit-bot/
+echo "$info" >> output.txt
+echo "$info"
+echo
+echo "$msg"
 echo
 
-###Copy the new file over the original file
-mv temp_file.txt output.txt
-
-# git remote set-url origin git@github.com:theshteves/commit-bot.git
-
+# Ship it
 git add output.txt
-git commit -m “commit-bot”
+git commit -m "$msg"
 git push origin master
-echo
 
-git status
+cd -
