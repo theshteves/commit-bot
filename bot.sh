@@ -14,7 +14,7 @@
 # ...c'mon, nobody commits EVERY day ;)
 #
 info="Commit: $(date)"
-msg="$(fortune -s)"
+msg="$(/usr/local/bin/fortune -s)"
 
 cd ~/Desktop/code/commit-bot/
 echo "$info" >> output.txt
