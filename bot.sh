@@ -14,18 +14,15 @@
 # ...c'mon, nobody commits EVERY day ;)
 #
 info="Commit: $(date)"
-msg="$(/usr/local/bin/fortune -s)"
 
 cd ~/Desktop/code/commit-bot/
 echo "$info" >> output.txt
 echo "$info"
 echo
-echo "$msg"
-echo
 
 # Ship it
 git add output.txt
-git commit -m "$msg"
+git commit -m "$info"
 git push origin master
 
 cd -
