@@ -36,7 +36,7 @@ If you haven't already,
 1. Open your command-line
 <br>& navigate to whatever folder you prefer
 
-2. Fork this project
+2. [Fork this project](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo) on GitHub
 
 2. Download your new copy of this project
 
