@@ -3,7 +3,7 @@
 # Commit Bot by Steven Kneiser
 #
 # Deploy locally by adding the following line to your crontab:
-# 0 22 * * * source /path/to/this/script.sh
+# 0 22 * * * source /path/to/this/bot.sh
 #
 # Edit your crontab in vim w/ the simple command:
 # crontab -e
