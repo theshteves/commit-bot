@@ -3,7 +3,7 @@
 # Commit Bot by Steven Kneiser
 #
 # Deploy locally by adding the following line to your crontab:
-# 0 22 * * * source ~/Desktop/code/commit-bot/bot.sh
+# 0 22 * * * source /path/to/this/script.sh
 #
 # Edit your crontab in vim w/ the simple command:
 # crontab -e
@@ -15,7 +15,8 @@
 #
 info="Commit: $(date)"
 
-cd ~/Desktop/code/commit-bot/ || exit 1
+cd "$(dirname "$(readlink -f "$0")")" || exit 1
+
 echo "$info" >> output.txt
 echo "$info"
 echo
