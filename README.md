@@ -50,7 +50,7 @@ git clone https://github.com/<your-github-username>/commit-bot.git
 <br>in case you need to fix permissions issues
 
 ```shell
-source ./commit-bot/bot.sh
+/bin/bash ./commit-bot/bot.sh
 ```
 
 4. [Open your crontab](https://www.howtogeek.com/101288/how-to-schedule-tasks-on-linux-an-introduction-to-crontab-files/) to set a trigger
@@ -75,7 +75,7 @@ crontab -e
 5. Add this line to [schedule every 10pm or whenever](https://crontab.guru/#0_22_*_*_*)
 
 ```shell
-0 22 * * * source /<full-path-to-your-folder>/commit-bot/bot.sh
+0 22 * * * /bin/bash /<full-path-to-your-folder>/commit-bot/bot.sh
 ```
 
 **Do not forget to include the correct folder path**
