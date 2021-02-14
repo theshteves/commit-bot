@@ -44,10 +44,8 @@ echo "$info"
 echo
 
 # Ship it
-<<-COMMENT
 git add output.txt
 git commit -m "$info"
 git push origin master
-COMMENT
 
 cd -
