@@ -14,6 +14,8 @@ This is a Bash script
 <br>designed to be run locally
 <br>(i.e. on _your_ machine)
 
+<br><br>
+
 > But [@theshteves](https://github.com/theshteves),
 > <br>I want this to run every day
 
@@ -25,6 +27,8 @@ Nobody commits every day
 
 We're looking for a more realistic distribution of activity throughout the year
 
+<br><br>
+
 ## Getting Started
 
 If you're on Windows™,
@@ -32,6 +36,8 @@ If you're on Windows™,
 
 If you haven't already,
 <br>[install git](https://github.com/git-guides/install-git)
+
+<br>
 
 1. Open your command-line
 <br>& navigate to whatever folder you prefer
