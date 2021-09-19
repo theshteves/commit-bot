@@ -1,7 +1,15 @@
-# commit-bot
+# GitHub Commit Bot
 
 Generate Organic™ GitHub activity
 <br>_My most insidious idea yet_
+
+<br>
+
+<p align="center">
+  <img width="90%" src="./the-dream.png" alt="The Contribution Dream">
+</p>
+
+<br>
 
 Once a day (if my laptop is open),
 <br>commit-bot adds today's line:
