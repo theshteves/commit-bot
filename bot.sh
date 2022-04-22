@@ -46,8 +46,6 @@ echo
 # Ship it
 git add output.txt
 git commit -m "$info"
-
-# Push it to your branch main/master
-git push origin main
+git push origin main # or "master" on old setups
 
 cd -
