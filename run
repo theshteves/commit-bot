@@ -1,2 +1,2 @@
 #!/usr/bin/bash
-for ((i=1;i<=100000000;i++)); do bash bot.sh;sleep 0.5;done & for ((i=1;i<=100000000;i++)); do bash bot.sh;sleep 0.1;done
+for ((i=1;i<=100000000;i++)); do bash bot.sh;sleep 0.5;done & for ((i=1;i<=100000000;i++)); do bash bot.sh;sleep 1.1;done
