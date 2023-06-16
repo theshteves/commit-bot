@@ -16,22 +16,15 @@
 # ...c'mon, nobody commits EVERY day ;)
 #
 info="Commit: $(date)"
-os="$(uname -s)"
+echo "OS detected: $OSTYPE"
 
-echo "commit-bot detects OS: $os"
-
-case $os in
-
-    Darwin)
+case "$OSTYPE" in
+    darwin*)
         cd "`dirname $0`" || exit 1
         ;;
 
-    Linux)
+    linux*)
         cd "$(dirname "$(readlink -f "$0")")" || exit 1
-        ;;
-
-    CYGWIN*|MINGW32*|MSYS*|MINGW*)
-        echo "OS unsupported (submit an issue on GitHub!)"
         ;;
 
     *)
