@@ -39,11 +39,10 @@ We're looking for a more realistic distribution of activity throughout the year
 
 ## Getting Started
 
-If you're on Windows™,
-<br>[setup the Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
+> If you're on Windows™,
+> <br>[setup the Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
 
-If you haven't already,
-<br>[install git](https://github.com/git-guides/install-git)
+[Install `git` if `git --version` errors out](https://github.com/git-guides/install-git)
 
 <br>
 
@@ -97,3 +96,18 @@ crontab -e
 > NOTE:
 > <br>Make sure you save your changes
 > <br>on your way out!
+>
+> To verify your cron installation:
+>
+> ```shell
+> crontab -l
+> ```
+>
+> that should print the same line
+> <br>we just saved to your crontab
+>
+> Now, to celebrate, test your script 🎉
+>
+> ```shell
+> /bin/bash /<full-path-to-your-folder>/commit-bot/bot.sh
+> ```
