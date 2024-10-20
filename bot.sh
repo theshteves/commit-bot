@@ -36,13 +36,12 @@ echo "$info" >> output.txt
 echo "$info"
 echo
 
-
-# Detect the current branch dynamically
+# Detect current branch (main, master, etc)
 branch=$(git rev-parse --abbrev-ref HEAD)
 
 # Ship it
 git add output.txt
 git commit -m "$info"
-git push origin "$branch" # Pushes automatically to HEAD branch
+git push origin "$branch"
 
 cd -
