@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+#
+# Commit Bot by Steven Kneiser
+#
+# > https://github.com/theshteves/commit-bot
+#
+# No need to deploy locally
+# You can just configure GitHub Action once and forget about it
+# Leaving the commit probability to 80% because...
+# ...c'mon, nobody commits EVERY day ;)
+
+name: GitHub Activity Automation
+
+on:
+  schedule:
+    - cron: "0 1 * * *" # Runs daily at 1 AM UTC, 8 PM EST
+  workflow_dispatch: # Allows manual triggering
+
+jobs:
+  commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GH_PAT }} # Use the token for authentication
+
+      - name: Commit and push changes
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          # Generate random count between 0 and 9
+          COMMIT_COUNT=$((RANDOM % 10))
+          # to mirror realistic commits - 2/10 times no commits
+          NO_COMMIT_CHANCE=2
+          # do not commit for (0,1), commit for (2,3,4,5,6,7,8,9)
+          for ((i=NO_COMMIT_CHANCE; i<=COMMIT_COUNT; i++)); do
+            echo "Commit - $(date)" >> output.txt
+            git add output.txt
+            git commit -m "$info"
+          done
+
+          # Push only if at least one commit was made
+          if [ "$COMMIT_COUNT" -gt 0 ]; then
+            git push
+          fi
